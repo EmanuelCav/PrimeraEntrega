@@ -1,0 +1,20 @@
+<div>
+
+    <form id="form-message" style="margin-top: 50px;">
+        <input type="text" id="user" placeholder="Write your user">
+        <input type="text" id="message" placeholder="Write a message">
+        <button>Sumbit</button>
+    </form>
+
+    <div id="container-messages">
+        {{#each messages}}
+
+        <p>{{this.user}}: {{this.message}}</p>
+
+        {{/each}}
+    </div>
+
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/message.js"></script>
